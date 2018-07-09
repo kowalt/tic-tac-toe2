@@ -9,7 +9,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Zajebiste kolko i krzyzyk kurwo</h1>
+          <h1 className="App-title">TIC TAC TOE by TOMASZ KOWAL</h1>
         </header>
         <p className="App-intro">
           Tu bedzie gra
