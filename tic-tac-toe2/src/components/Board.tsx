@@ -1,10 +1,19 @@
 import * as React from "react";
 import Square from "./Square";
 
-export default class Board extends React.Component{
+interface BoardProps{
+
+}
+
+interface BoardState{
+
+}
+
+export default class Board extends React.Component<BoardProps, BoardState>{
 
     render()
     {
+      return(
         <div>
             <div className="board-row">
                 {this.renderSquare(0)}
@@ -22,10 +31,11 @@ export default class Board extends React.Component{
                 {this.renderSquare(8)}
             </div>
         </div>
+      );
     }
 
     renderSquare(i: number)
     {
-        return <Square value={i} />
+        return <Square value={i}/>
     }
 }

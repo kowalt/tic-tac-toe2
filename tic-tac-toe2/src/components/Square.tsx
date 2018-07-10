@@ -16,7 +16,7 @@ export default class Square extends React.Component<SquareProps, SquareState>{
     }
 
     private onClick(){
-
+      dispatch(checkSquare(props.index));
     }
 
     render (){

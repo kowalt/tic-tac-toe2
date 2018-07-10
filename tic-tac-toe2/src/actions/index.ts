@@ -5,7 +5,6 @@ export interface ActionInterface{
 // squareType- can be 'X' or 'O'
 export const checkSquare = (squareType, index) => ({
     type: 'CHECK_SQUARE',
-    squareType,
     index
 });
 
