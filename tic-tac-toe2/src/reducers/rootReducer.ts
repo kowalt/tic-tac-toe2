@@ -1,3 +1,5 @@
+import { ActionInterface } from "../actions";
+
 export interface TicTacToeState {
     winner: string;
     history: BoardState[];
@@ -20,7 +22,7 @@ const initialState = {
     winner: ""
 }
 
-export default function rootReducer(state: TicTacToeState = initialState, action)
+export default function rootReducer(state: TicTacToeState = initialState, action: ActionInterface)
 {
     function jumpTo(step) {
         state.stepNumber = step;
@@ -30,6 +32,7 @@ export default function rootReducer(state: TicTacToeState = initialState, action
     switch(action.type)
     {
         case 'CHECK_SQUARE':
+
         case 'TIME_TRAVEL':
         case 'FETCH_HISTORY':
     }
