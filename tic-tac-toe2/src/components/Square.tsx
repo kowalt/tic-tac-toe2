@@ -1,10 +1,23 @@
 import * as React from 'react';
 
-export interface Props {
+export interface SquareProps {
     index: number;
 }
 
-export default class Square extends React.Component<Props, object>{
+export interface SquareState {
+    content: string;
+}
+
+export default class Square extends React.Component<SquareProps, SquareState>{
+
+    constructor(props: SquareProps)
+    {
+        super(props);
+    }
+
+    private onClick(){
+
+    }
 
     render (){
         return (

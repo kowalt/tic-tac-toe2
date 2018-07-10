@@ -1,7 +1,6 @@
 // squareType- can be 'X' or 'O'
 export const checkSquare = (squareType, index) => ({
     type: 'CHECK_SQUARE',
-    id: nextTodoId++,
     squareType,
     index
 });
