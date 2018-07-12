@@ -1,5 +1,7 @@
 import * as React from "react";
-import Square from "./Square";
+import SquareContainer from "./Square";
+
+import SquareContainer from "../containers/SquareContainer";
 
 interface BoardProps{
 
@@ -36,6 +38,6 @@ export default class Board extends React.Component<BoardProps, BoardState>{
 
     renderSquare(i: number)
     {
-        return <Square value={i}/>
+        return <SquareContainer index={i}/>
     }
 }

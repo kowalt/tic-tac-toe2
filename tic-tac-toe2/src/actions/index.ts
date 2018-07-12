@@ -3,17 +3,17 @@ export interface ActionInterface{
 }
 
 // squareType- can be 'X' or 'O'
-export const checkSquare = (squareType, index) => ({
+export const checkSquare = (index: number) => ({
     type: 'CHECK_SQUARE',
     index
 });
 
-export const timeTravel = (moveIndex) => ({
+export const timeTravel = (moveIndex: number) => ({
     type: 'TIME_TRAVEL',
     moveIndex
 });
 
-export const fetchHistory = (index) => ({
+export const fetchHistory = (index: number) => ({
         type: 'FETCH_HISTORY',
         index
     }

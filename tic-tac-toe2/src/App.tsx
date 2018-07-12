@@ -5,11 +5,13 @@ import logo from './logo.svg';
 import Game from "./components/Game";
 
 import {Provider} from 'react-redux';
+import {createStore} from "redux";
+import rootReducer from "./reducers/rootReducer";
 
 class App extends React.Component {
   public render() {
 
-    const store = createStore(todoApp);
+    const store = createStore(rootReducer);
 
     return (
       <div className="App">
