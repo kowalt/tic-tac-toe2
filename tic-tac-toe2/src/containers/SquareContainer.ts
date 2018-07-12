@@ -3,18 +3,18 @@ import {default as Square, SquareEventProps, SquareProps} from "../components/Sq
 import {TicTacToeState} from "../reducers/rootReducer";
 import {checkSquare} from "../actions";
 
-function mapStateToProps(state: TicTacToeState): SquareProps  {
+function mapStateToProps(state: TicTacToeState, ownProps: any): SquareProps  {
 
     return {
-        content: state.history[state.stepIndex].squares[0].content;
+        content: state.history[state.stepIndex].squares[ownProps.index],
     }
 }
 
-function mapDispatchToProps(dispatch: any): SquareEventProps {
+function mapDispatchToProps(dispatch: any, ownProps: any): SquareEventProps {
     return{
-        onClick(index)
+        onClick()
         {
-            dispatch(checkSquare(index));
+            dispatch(checkSquare(ownProps.index));
         }
     }
 }

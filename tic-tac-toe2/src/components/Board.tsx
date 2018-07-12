@@ -1,5 +1,4 @@
 import * as React from "react";
-import SquareContainer from "./Square";
 
 import SquareContainer from "../containers/SquareContainer";
 

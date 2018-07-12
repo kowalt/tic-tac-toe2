@@ -1,8 +1,7 @@
 import * as React from 'react';
 
 export interface SquareProps {
-    index?: number;
-    content?: string;
+    content: string;
 }
 
 export interface SquareState {
