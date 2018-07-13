@@ -5,7 +5,7 @@ export default class Game extends React.Component{
 
     render() {
         return (
-            <div>
+            <div className="game">
                 <div>And the winner is:{this.props.winner}</div>
                 <Board/>
             </div>
