@@ -39,7 +39,7 @@
 }
 
 div.board {
-    border: 1px solid green;
+    border: 1px;
     width: 30px;
     height: 40px;
     margin: auto;
