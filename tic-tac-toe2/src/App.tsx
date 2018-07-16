@@ -2,11 +2,11 @@ import * as React from 'react';
 import './App.css';
 
 import logo from './logo.svg';
-import Game from "./components/Game";
 
 import {Provider} from 'react-redux';
 import {createStore} from "redux";
 import rootReducer from "./reducers/rootReducer";
+import GameContainer from "./containers/GameContainer";
 
 class App extends React.Component {
   public render() {
@@ -21,7 +21,7 @@ class App extends React.Component {
         </header>
         <p className="App-intro">
             <Provider store={store}>
-                <Game />
+                <GameContainer />
             </Provider>
         </p>
       </div>

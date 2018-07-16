@@ -1,7 +1,11 @@
 import * as React from 'react';
 import Board from './Board';
 
-export default class Game extends React.Component{
+export interface GameProps{
+    winner: string | null;
+}
+
+export default class Game extends React.Component<GameProps, {}>{
 
     render() {
         return (
