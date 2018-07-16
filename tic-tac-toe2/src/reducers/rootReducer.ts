@@ -12,18 +12,7 @@ class BoardState {
     squares: string[];
 }
 
-const initialState = {
-    history: [
-        {
-            squares: Array(9).fill("")
-        }
-    ],
-    stepIndex: 0,
-    xIsNext: true,
-    winner: ""
-}
-
-export default function rootReducer(state: TicTacToeState = initialState, action: any) //actionInterface TODO
+export default function rootReducer(state: TicTacToeState, action: any) //actionInterface TODO
 {
     function jumpTo(step: number) {
         state.stepIndex = step;

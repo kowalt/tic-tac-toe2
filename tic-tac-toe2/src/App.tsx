@@ -11,7 +11,18 @@ import GameContainer from "./containers/GameContainer";
 class App extends React.Component {
   public render() {
 
-    const store = createStore(rootReducer);
+    const initialState = {
+      history: [
+          {
+              squares: Array(9).fill("")
+          }
+      ],
+      stepIndex: 0,
+      xIsNext: true,
+      winner: ""
+    }
+
+    const store = createStore(rootReducer, initialState);
 
     return (
       <div className="App">
