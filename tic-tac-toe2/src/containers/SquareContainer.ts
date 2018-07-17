@@ -7,6 +7,7 @@ function mapStateToProps(state: TicTacToeState, ownProps: any): SquareProps  {
 
     return {
         content: state.history[state.stepIndex].squares[ownProps.index],
+        index: ownProps.index
     }
 }
 
