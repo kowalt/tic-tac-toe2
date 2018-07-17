@@ -30,11 +30,11 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">TIC TAC TOE by TOMASZ KOWAL</h1>
         </header>
-        <p className="App-intro">
+        <div className="App-intro">
             <Provider store={store}>
                 <GameContainer />
             </Provider>
-        </p>
+        </div>
       </div>
     );
   }
