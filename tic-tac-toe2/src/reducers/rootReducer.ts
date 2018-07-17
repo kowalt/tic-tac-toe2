@@ -45,15 +45,18 @@ export default function rootReducer(state: TicTacToeState, action: any) //action
     {
         case 'CHECK_SQUARE':
           let index: number = action.index;
+
+          state.stepIndex++;
+          state.xIsNext = ((state.stepIndex%2) === 0);
+
+          state.history[state.stepIndex] = _.cloneDeep(state.history[state.stepIndex-1]);
+
           if(state.xIsNext == true){
             state.history[state.stepIndex].squares[index] = 'X';
           }
           else {
             state.history[state.stepIndex].squares[index] = 'O';
           }
-
-          state.stepIndex++;
-          state.xIsNext = ((state.stepIndex%2) === 0);
 
           state.winner = calculateWinner(state.history[state.stepIndex].squares);
           break;
