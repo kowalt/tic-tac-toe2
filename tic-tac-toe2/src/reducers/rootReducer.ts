@@ -52,6 +52,8 @@ export default function rootReducer(state: TicTacToeState, action: any) //action
             state.history[state.stepIndex].squares[index] = 'O';
           }
 
+          state.xIsNext = ((state.stepIndex%2) === 0);
+
           state.winner = calculateWinner(state.history[state.stepIndex].squares);
           break;
         case 'TIME_TRAVEL':
