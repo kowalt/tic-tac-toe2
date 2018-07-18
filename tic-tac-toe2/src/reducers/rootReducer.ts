@@ -41,8 +41,12 @@ export default function rootReducer(state: TicTacToeState, action: any) //action
           return null;
     }
 
+    state = _.clone(state);
+
     switch(action.type)
     {
+
+
         case 'CHECK_SQUARE':
           let index: number = action.index;
 

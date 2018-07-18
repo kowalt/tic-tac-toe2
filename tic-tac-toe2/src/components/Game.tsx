@@ -8,9 +8,14 @@ export interface GameProps{
 export default class Game extends React.Component<GameProps, {}>{
 
     render() {
+        let announcement = "";
+        if(this.props.winner)
+            announcement = "And the winner is: ";
+
         return (
             <div className="game">
-                <div>And the winner is:{this.props.winner}</div>
+                <div>
+                    {announcement}{this.props.winner}</div>
                 <Board/>
             </div>
         );

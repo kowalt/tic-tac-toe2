@@ -25,8 +25,8 @@ export default class Square extends React.Component<SquareProps & SquareEventPro
         super(props);
     }
 
-    render (){
-        console.log("Rendering square");
+    public render(){
+        console.log(this.props.content);
         return (
             <button className="square" onClick={() => this.props.onClick(this.props.index)}>{this.props.content}</button>
         );
