@@ -8,7 +8,7 @@ export interface TicTacToeState {
     xIsNext: boolean;
 }
 
-class BoardState {
+export class BoardState {
     squares: string[];
 }
 
@@ -45,10 +45,13 @@ export default function rootReducer(state: TicTacToeState, action: any) //action
 
     switch(action.type)
     {
-
-
         case 'CHECK_SQUARE':
           let index: number = action.index;
+
+          //prevent checking the square that is already filled
+          if(state.history[state.stepIndex].squares[action.index] != "" ){
+              break;
+          }
 
           state.stepIndex++;
           state.xIsNext = ((state.stepIndex%2) === 0);

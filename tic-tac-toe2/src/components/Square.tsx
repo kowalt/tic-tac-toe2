@@ -16,11 +16,6 @@ export interface SquareEventProps
 
 export default class Square extends React.Component<SquareProps & SquareEventProps, SquareState>{
 
-    /*
-    shouldComponentUpdate(){
-        console.log("shouldComponentUpdate");
-    }*/
-
     constructor(props: SquareProps & SquareEventProps) {
         super(props);
     }

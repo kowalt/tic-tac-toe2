@@ -14,8 +14,8 @@ export default class Game extends React.Component<GameProps, {}>{
 
         return (
             <div className="game">
-                <div>
-                    {announcement}{this.props.winner}</div>
+                <div>{announcement}{this.props.winner}</div>
+
                 <Board/>
             </div>
         );
