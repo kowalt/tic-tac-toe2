@@ -11,11 +11,11 @@ function mapStateToProps(state: TicTacToeState) : HistoryProps{
   };
 }
 
-function mapDispatchToProps(dispatch: any, ownProps: any): HistoryEventProps{
+function mapDispatchToProps(dispatch: any): HistoryEventProps{
     return{
-        onClick()
+        onClick(index)
         {
-            dispatch(fetchHistory(ownProps.index));
+            dispatch(fetchHistory(index));
         }
     };
 }
