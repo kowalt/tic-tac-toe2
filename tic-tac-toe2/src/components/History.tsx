@@ -6,13 +6,17 @@ export interface HistoryProps{
 }
 
 export interface HistoryState{
-
+    stepNumber: number;
 }
 
+export interface HistoryEventProps
+{
+    onClick: (index: number) => void;
+}
 
-export default class History extends React.Component<HistoryProps, HistoryState>{
+export default class History extends React.Component<HistoryProps & HistoryEventProps, HistoryState>{
 
-    constructor(props: HistoryProps){
+    constructor(props: HistoryProps & HistoryEventProps){
       super(props);
     }
 
@@ -30,7 +34,7 @@ export default class History extends React.Component<HistoryProps, HistoryState>
         const listItems = history.map((historyItem, index) =>
           <div className="historyListItemContainer">
             <li key="index">
-              <button>
+              <button onClick={() => this.props.onClick(index)}>
                 labels[index];
               </button>
             </li>

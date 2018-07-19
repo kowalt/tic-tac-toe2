@@ -1,6 +1,8 @@
 import {connect} from "react-redux";
-import {HistoryProps} from "../components/History";
+import {HistoryEventProps, HistoryProps} from "../components/History";
+import History from "../components/History";
 import { TicTacToeState } from "../reducers/rootReducer";
+import {fetchHistory} from "../actions";
 
 function mapStateToProps(state: TicTacToeState) : HistoryProps{
   return{
@@ -8,8 +10,18 @@ function mapStateToProps(state: TicTacToeState) : HistoryProps{
   };
 }
 
+function mapDispatchToProps(dispatch: any, ownProps: any): HistoryEventProps{
+    return{
+        onClick()
+        {
+            dispatch(fetchHistory(ownProps.index));
+        }
+    };
+}
+
 const HistoryContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(History);
 
 export default HistoryContainer;

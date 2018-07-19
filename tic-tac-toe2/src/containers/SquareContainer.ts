@@ -23,6 +23,6 @@ function mapDispatchToProps(dispatch: any, ownProps: any): SquareEventProps {
 const SquareContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Square)
+)(Square);
 
 export default SquareContainer;
