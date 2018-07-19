@@ -3,6 +3,7 @@ import {BoardState} from "../reducers/rootReducer";
 
 export interface HistoryProps{
     history: BoardState[];
+    stepNumber: number;
 }
 
 export interface HistoryState{
@@ -33,9 +34,9 @@ export default class History extends React.Component<HistoryProps & HistoryEvent
 
         const listItems = history.map((historyItem, index) =>
           <div className="historyListItemContainer">
-            <li key="index">
+            <li key={index}>
               <button onClick={() => this.props.onClick(index)}>
-                labels[index];
+                  {labels[index]}
               </button>
             </li>
           </div>

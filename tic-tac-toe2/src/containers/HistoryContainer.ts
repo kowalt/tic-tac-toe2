@@ -6,7 +6,8 @@ import {fetchHistory} from "../actions";
 
 function mapStateToProps(state: TicTacToeState) : HistoryProps{
   return{
-    history: state.history
+    history: state.history,
+    stepNumber: state.stepIndex
   };
 }
 
