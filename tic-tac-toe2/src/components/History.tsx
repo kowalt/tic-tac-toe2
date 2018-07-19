@@ -24,9 +24,9 @@ export default class History extends React.Component<HistoryProps & HistoryEvent
     render(){
         const history = this.props.history;
 
-        let labels: string[]= new Array(history.length);
+        let labels: string[]= [];
         let labelsContentTemplate = "Go to move #";
-        labels[0] = "Go to the game start";
+        labels.push("Go to the game start");
 
         for(let i=1; i<history.length; i++){
           labels.push(labelsContentTemplate+i)
