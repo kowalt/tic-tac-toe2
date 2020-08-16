@@ -29,7 +29,7 @@ export default class History extends React.Component<HistoryProps & HistoryEvent
         labels.push("Go to the game start");
 
         for(let i=1; i<history.length; i++){
-          labels.push(labelsContentTemplate+i)
+          labels.push(labelsContentTemplate + i)
         }
 
         const listItems = history.map((historyItem, index) =>

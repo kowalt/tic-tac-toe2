@@ -58,7 +58,7 @@ export default function rootReducer(state: TicTacToeState, action: any) //action
 
           state.history[state.stepIndex] = _.cloneDeep(state.history[state.stepIndex-1]);
 
-          if(state.xIsNext == true){
+          if(state.xIsNext){
             state.history[state.stepIndex].squares[index] = 'X';
           }
           else {
@@ -72,7 +72,7 @@ export default function rootReducer(state: TicTacToeState, action: any) //action
           state.history = _.slice(state.history,0, action.moveIndex);
           break;
         case 'FETCH_HISTORY':
-          jumpTo(action.moveIndex);
+          jumpTo(action.index);
           break;
     }
 
